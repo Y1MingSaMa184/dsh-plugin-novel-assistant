@@ -1,0 +1,3 @@
+- insert:
+    - id: novel-assistant
+      name: '@local/dsh-plugin-novel-assistant'

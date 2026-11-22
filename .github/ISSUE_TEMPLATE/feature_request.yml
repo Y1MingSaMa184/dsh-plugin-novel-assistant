@@ -1,0 +1,23 @@
+name: Feature request / 功能建议
+description: Suggest an idea for the workbench. / 想加点什么。
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        路线图在 README 底部，先看看是不是已经在计划里。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你想解决什么问题 / What problem are you hitting
+      description: 描述场景，而不只是「加个按钮」。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 你设想的方案 / Proposed solution
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 考虑过的替代方案 / Alternatives considered

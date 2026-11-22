@@ -1,0 +1,50 @@
+{
+  "name": "@local/dsh-plugin-novel-assistant",
+  "version": "1.3.0",
+  "private": true,
+  "description": "A multi-project novel workbench with a causal timeline, character cards, and custom volume/chapter outlines.",
+  "license": "MIT",
+  "author": "林一鸣 (Y1MingSaMa184)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Y1MingSaMa184/dsh-plugin-novel-assistant.git"
+  },
+  "homepage": "https://github.com/Y1MingSaMa184/dsh-plugin-novel-assistant#readme",
+  "bugs": {
+    "url": "https://github.com/Y1MingSaMa184/dsh-plugin-novel-assistant/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "novel",
+    "writing",
+    "outline",
+    "timeline"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
