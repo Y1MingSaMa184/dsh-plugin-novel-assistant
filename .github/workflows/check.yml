@@ -1,0 +1,25 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Parse host and client halves
+        run: |
+          node --check index.js
+          node --check client.js
+      - name: Validate JSON files
+        run: |
+          node -e "for (const f of ['package.json','locale/zh.json','locale/en.json']) { JSON.parse(require('fs').readFileSync(f,'utf8')); console.log('ok', f) }"
+      - name: Check bundle patch is valid YAML
+        run: |
+          node -e "const y=require('fs').readFileSync('cordis.patch.yml','utf8'); if(!y.includes('novel-assistant')) { throw new Error('patch missing plugin id') }; console.log('ok cordis.patch.yml')"

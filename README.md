@@ -2,6 +2,7 @@
 
 > 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 用的写作工作台：把「剧情因果」画成可拖拽的时间线，配角色卡与卷章大纲。纯客户端、零构建、数据只留在你自己的浏览器里。
 
+[![check](https://github.com/Y1MingSaMa184/dsh-plugin-novel-assistant/actions/workflows/check.yml/badge.svg)](https://github.com/Y1MingSaMa184/dsh-plugin-novel-assistant/actions/workflows/check.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![DSH plugin](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f6d8a)
 ![Version](https://img.shields.io/badge/version-1.3.0-b45f3c)
